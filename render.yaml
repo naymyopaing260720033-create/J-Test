@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: jav-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false # Render dashboard မှာ သီးသန့်ထည့်ရအောင် sync: false လုပ်ထားပါတယ်
+    plan: free
